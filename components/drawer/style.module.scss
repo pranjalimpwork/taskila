@@ -1,0 +1,43 @@
+.drawer_main{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    box-shadow: 0 0 4px #00000071;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #e7eaf0;
+    transition: 0.2s;
+    .item{
+        font-size: 50px;
+        cursor: pointer;
+        text-align: center;
+
+        .text{
+            font-size: 20px;
+            color: #1f1c1f;
+        }
+    }
+    .todolist{
+        color: #c01c50;
+    }
+    .close_btn{
+        top: 2rem;
+        font-size: 2rem;
+        right: 1rem;
+        cursor: pointer;
+        transform: rotate(0);
+        transition: 0.2s;
+       
+    }
+
+    &.hide{
+        right: -200px;
+        transition: 0.2s;
+    }
+  
+}

@@ -1,0 +1,105 @@
+.home_main {
+  padding: 5rem;
+  .date {
+    font-size: 19px;
+  }
+  .logout_btn {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    i {
+      color: #99333a;
+    }
+  }
+  .home_header {
+    margin-bottom: 5rem;
+    .left {
+      .main_heading {
+        color: #1f1c1f;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .sub_heading {
+        color: #5e5f66;
+      }
+    }
+  }
+  .add_btn {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    width: 60px;
+    height: 60px;
+    background-color: #1f1c1f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .tab_header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 24px;
+    margin-bottom: 3rem;
+
+    .tab_title {
+      cursor: pointer;
+      padding: 0 10px;
+      position: relative;
+      opacity: 0.4;
+      i {
+        color: #bcc3d2;
+      }
+      &.active {
+        opacity: 1;
+        i {
+          color: initial;
+        }
+        cursor: pointer;
+        color: #1f1c1f;
+        &::before {
+          width: 100%;
+        }
+      }
+      &::before {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        height: 4px;
+        border-radius: 4px;
+        content: "";
+        background: #1f1c1f;
+        width: 0%;
+      }
+    }
+    .task {
+      i {
+        color: #99333a !important;
+      }
+      &::before {
+        background-color: #99333a;
+      }
+    }
+    .notes {
+      i {
+        color: #335899 !important;
+      }
+      &::before {
+        background-color: #335899;
+      }
+    }
+  }
+  .tab_pannel_container {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+}

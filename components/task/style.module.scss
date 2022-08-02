@@ -1,0 +1,15 @@
+.task_main {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  .no_data {
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    i {
+      color: #663399;
+    }
+  }
+}

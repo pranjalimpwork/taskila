@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fa-sun {
+  color: yellow;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+}
+.notes .fa-solid {
+  margin-right: 6px;
+}
+.fa-solid.pending {
+  color: rgba(227, 194, 10, 0.978) !important;
+  margin-right: 6px;
+}
+.fa-solid.done {
+  color: rgba(39, 227, 10, 0.978) !important;
+  margin-right: 6px;
+}
+
