@@ -1,16 +1,29 @@
-import React, { useEffect, useState } from "react"
-import style from "./style.module.scss"
+import React, { useEffect, useState } from "react";
+import style from "./style.module.scss";
 
 const ReadNotesModal = ({ showModal, setShowModal, data }) => {
-  const [hideModal, setHideModal] = useState(showModal)
+  const [text, setText] = useState(data.disc);
+
+  const [hideModal, setHideModal] = useState(showModal);
   const handleHideModal = () => {
-    setShowModal(false)
-    setHideModal(false)
-  }
+    setShowModal(false);
+    setHideModal(false);
+  };
+
+  const speakText = () => {
+    let utter = new SpeechSynthesisUtterance();
+    utter.lang = "en-US";
+    utter.text = text;
+    utter.volume = 0.5;
+    window.speechSynthesis.speak(utter);
+  };
+  const pauseText = () => {
+    window.speechSynthesis.cancel();
+  };
 
   useEffect(() => {
-    setHideModal(showModal)
-  }, [showModal])
+    setHideModal(showModal);
+  }, [showModal]);
 
   return (
     <>
@@ -32,11 +45,22 @@ const ReadNotesModal = ({ showModal, setShowModal, data }) => {
             <div className={style.input_group}>
               <div className={style.disc}>{data.disc}</div>
             </div>
+            <div
+              className={style.input_group}
+              style={{ display: "flex", gap: "5px" }}
+            >
+              <i className="fa-solid fa-circle-play" onClick={speakText}></i>
+              <i
+                className="fa-solid fa-circle-stop"
+                style={{ color: "red" }}
+                onClick={pauseText}
+              ></i>
+            </div>
           </div>
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default ReadNotesModal
+export default ReadNotesModal;

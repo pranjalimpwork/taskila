@@ -40,7 +40,7 @@
     }
     .input_group {
       margin-bottom: 20px;
-      .title{
+      .title {
         font-size: 24px;
         font-weight: 700;
       }
@@ -58,6 +58,15 @@
       }
       .selector {
         padding: 8px;
+      }
+      i {
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
     .add_task {
